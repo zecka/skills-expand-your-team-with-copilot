@@ -895,6 +895,31 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeRangeFilter,
   };
 
+<<<<<<< copilot/add-dark-mode-toggle
+  // Dark mode toggle
+  const darkModeToggle = document.getElementById("dark-mode-toggle");
+  const darkModeIcon = document.getElementById("dark-mode-icon");
+
+  function applyDarkMode(isDark) {
+    if (isDark) {
+      document.body.classList.add("dark-mode");
+      darkModeIcon.textContent = "☀️";
+    } else {
+      document.body.classList.remove("dark-mode");
+      darkModeIcon.textContent = "🌙";
+    }
+  }
+
+  // Load saved dark mode preference
+  const savedDarkMode = localStorage.getItem("darkMode") === "true";
+  applyDarkMode(savedDarkMode);
+
+  darkModeToggle.addEventListener("click", () => {
+    const isDark = !document.body.classList.contains("dark-mode");
+    applyDarkMode(isDark);
+    localStorage.setItem("darkMode", isDark);
+  });
+=======
   // Fallback copy to clipboard using a temporary textarea
   function fallbackCopyToClipboard(text) {
     const textarea = document.createElement("textarea");
@@ -936,6 +961,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Stop checking after 5 seconds
     setTimeout(() => clearInterval(checkInterval), 5000);
   }
+>>>>>>> main
 
   // Initialize app
   checkAuthentication();
