@@ -685,3 +685,65 @@ body.dark-mode textarea {
 #logout-button:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
+
+/* Social share buttons */
+.share-buttons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-light);
+}
+
+.share-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  margin-right: 2px;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s, transform 0.2s;
+  padding: 0;
+}
+
+.share-btn:hover {
+  opacity: 0.85;
+  transform: scale(1.1);
+}
+
+.share-twitter {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.share-facebook {
+  background-color: #1877f2;
+  color: #ffffff;
+  font-family: serif;
+  font-size: 1rem;
+}
+
+.share-copy {
+  background-color: var(--border);
+  color: var(--text-primary);
+  font-size: 0.85rem;
+}
+
+/* Highlight card when navigated to via a shared link */
+.highlighted-activity {
+  box-shadow: 0 0 0 3px var(--secondary), 0 8px 15px rgba(0, 0, 0, 0.1);
+  border-color: var(--secondary);
+}
